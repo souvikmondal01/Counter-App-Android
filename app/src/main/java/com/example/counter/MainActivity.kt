@@ -2,10 +2,30 @@ package com.example.counter
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.lifecycle.ViewModelProvider
+import com.example.counter.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        val binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        val viewModel = ViewModelProvider(this).get(MainActivityViewModel::class.java)
+        binding.tvCount.text = viewModel.num.toString()
+
+        binding.btnIncrement.setOnClickListener {
+            viewModel.inc()
+            binding.tvCount.text = viewModel.num.toString()
+        }
+        binding.btnDecrement.setOnClickListener {
+            viewModel.dec()
+            binding.tvCount.text = viewModel.num.toString()
+        }
+        binding.btnReset.setOnClickListener {
+            viewModel.reset()
+            binding.tvCount.text = viewModel.num.toString()
+        }
     }
+
 }
