@@ -11,28 +11,56 @@
         android:id="@+id/tv_count"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
+        android:fontFamily="@font/anton"
+        android:text="0"
+        android:textColor="@color/white"
+        android:textSize="125sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        android:text="0"
-        android:textSize="125sp"
-        android:fontFamily="@font/anton"
-        android:textColor="@color/white"
-        app:layout_constraintVertical_bias=".25"
-        />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias=".25" />
+
     <ImageButton
         android:id="@+id/btn_reset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/reset"
+        android:foreground="?android:attr/selectableItemBackground"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_count"
         app:layout_constraintVertical_bias=".98"
-        android:background="@drawable/reset"
-        android:foreground="?android:attr/selectableItemBackground"
         tools:ignore="UnusedAttribute" />
+
+    <ImageButton
+        android:id="@+id/btn_increment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/plus_btn"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:layout_constraintBottom_toTopOf="@id/btn_reset"
+        app:layout_constraintLeft_toRightOf="@id/gl_1"
+
+        tools:ignore="UnusedAttribute" />
+
+    <ImageButton
+        android:id="@+id/btn_decrement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/minus_btn"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:layout_constraintBottom_toTopOf="@id/btn_reset"
+        app:layout_constraintRight_toLeftOf="@id/gl_1"
+        tools:ignore="UnusedAttribute" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".5" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
