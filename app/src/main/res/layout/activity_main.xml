@@ -38,22 +38,49 @@
         android:id="@+id/btn_increment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/plus_btn"
+        android:background="@drawable/btn_1"
         android:foreground="?android:attr/selectableItemBackground"
         app:layout_constraintBottom_toTopOf="@id/btn_reset"
         app:layout_constraintLeft_toRightOf="@id/gl_1"
+        tools:ignore="UnusedAttribute"/>
 
-        tools:ignore="UnusedAttribute" />
 
     <ImageButton
         android:id="@+id/btn_decrement"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/minus_btn"
+        android:background="@drawable/btn_2"
         android:foreground="?android:attr/selectableItemBackground"
         app:layout_constraintBottom_toTopOf="@id/btn_reset"
         app:layout_constraintRight_toLeftOf="@id/gl_1"
         tools:ignore="UnusedAttribute" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/btn_increment"
+        app:layout_constraintBottom_toBottomOf="@id/btn_increment"
+        app:layout_constraintStart_toStartOf="@id/btn_increment"
+        app:layout_constraintEnd_toEndOf="@id/btn_increment"
+        android:textSize="45sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:text="+"
+        app:layout_constraintVertical_bias=".35"
+        app:layout_constraintHorizontal_bias=".75" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/btn_decrement"
+        app:layout_constraintBottom_toBottomOf="@id/btn_decrement"
+        app:layout_constraintStart_toStartOf="@id/btn_decrement"
+        app:layout_constraintEnd_toEndOf="@id/btn_decrement"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:text="-"
+        android:textAlignment="center"
+        app:layout_constraintVertical_bias=".35"
+        app:layout_constraintHorizontal_bias=".25" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/gl_1"
