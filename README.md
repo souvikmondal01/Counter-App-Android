@@ -7,6 +7,9 @@ This is a basic Counter app.
 ## App Icon 📱
 <img src="images/logo.png" width="80px"/>
 
+## Demonstration
+<img src="images/gif.gif" height="400px" width="225px"/>
+
 ## Screenshots
 <p><b>Potrait</b></p>
 <img src="images/img1.jpg" height="400px" width="225px"/>
