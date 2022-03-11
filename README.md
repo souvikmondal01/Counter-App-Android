@@ -1,5 +1,5 @@
 # Counter App
-This is a basic Counter app.
+This is a basic tally counter app.
 ## Built With 🛠
 * [Kotlin] - First class and official programming language for Android development.
 * [ViewModel] - Stores UI-related data that isn't destroyed on UI changes.
